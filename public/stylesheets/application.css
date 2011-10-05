@@ -1,0 +1,149 @@
+/*
+  Override default refinery application CSS below.
+  Formatting applies to all frontend.
+*/
+
+
+/*** GLOBAL ***/
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.clearBoth {
+	clear: both;
+}
+
+
+/*** HOME PAGE ***/
+.wrapper {
+	width: 900px;
+	margin: 0 auto;
+}
+
+/* Header */
+.header {
+	
+}
+
+.headerTop {
+	position: relative;
+	top: 21px;
+	margin-top: -21px;
+}
+
+.logo {
+	margin-left: 3px;
+}
+
+.utilityNav {
+	position: relative;
+	top: 20px;
+}
+
+	.utilityNav a {
+		color: #000;
+		text-decoration: none;
+	}
+
+.headerDivider {
+	background-color: #c20000;
+	width: 100%;
+	height: 50px;
+}
+
+.search {
+	color: #fff;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+/* Body */
+.sideNav {
+	background-color: #002a5c;
+	width: 200px;
+	min-height: 300px;
+	margin: 2px 2px 2px 0;
+	
+	padding: 20px 15px;
+	
+	color: #fff;
+	
+	-moz-border-radius-topright: 30px;
+	-moz-border-radius-bottomleft: 30px;
+	-webkit-border-top-right-radius: 30px;
+	-webkit-border-bottom-left-radius: 30px;
+	border-top-right-radius: 30px;
+	border-bottom-left-radius: 30px;
+	/* -khtml-border-radius: 10px; */ /* for old Konqueror browsers */
+}
+
+	.sideNav ul li {
+		margin-bottom: 2px;
+	}
+
+	.sideNav a {
+		color: #fff;
+		text-decoration: none;
+	}
+	
+.sections {
+	margin: 2px 0 2px 2px;
+}
+
+	.sections div {
+		border: 1px solid #000;
+		height: 108px;
+		width: 225px;
+		
+		margin-bottom: 5px;
+		
+		-moz-border-radius-topright: 30px;
+		-moz-border-radius-bottomleft: 30px;
+		-webkit-border-top-right-radius: 30px;
+		-webkit-border-bottom-left-radius: 30px;
+		border-top-right-radius: 30px;
+		border-bottom-left-radius: 30px;
+	}
+	
+	.sections div:last-child {
+		margin-bottom: 0;
+	}
+
+/* Footer */
+.footer {
+	width: 100%;
+}
+
+.footerDivider {
+	background-color: #c20000;
+	width: 100%;
+	height: 40px;
+	color: #fff;
+}
+	
+.footerUtilityNav {
+	color: #fff;
+	margin: 10px 20px;
+}
+
+	.footerUtilityNav a {
+		color: #fff;
+		text-decoration: none;
+	}
+	
+.mailingList {
+	margin: 3px 20px;
+}
+
+	.mailingList img {
+		position: relative;
+		top: 5px;
+	}
+	
+.socialMedia 	{
+	width: auto;
+}

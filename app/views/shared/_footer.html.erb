@@ -1,0 +1,20 @@
+<div class="footerDivider">
+	<div class="footerUtilityNav floatLeft">
+		<a href="#">Kidstop Cuties</a> | 
+		<a href="#">Help</a> | 
+		<a href="#">We Listen</a>
+	</div>
+	
+	<div class="mailingList floatRight">
+		<label>Join Our Mailing List</label>
+		<input type="text" />
+		<input type="submit" />
+		
+		<img src="images/facebook.png">
+	</div>
+</div>
+
+<p class="floatRight">
+  <%= t('.copyright', :year => Time.now.year,
+                      :site_name => RefinerySetting.find_or_set(:site_name, "Company Name")) %>
+</p>

@@ -1,0 +1,24 @@
+<div class="headerTop">
+	<div class="logo floatLeft">
+		<img src="images/logo.png" />
+	</div>
+	
+	<div class="utilityNav floatRight">
+		<a href="#">About Us</a> | 
+		<a href="#">Customer Service</a> | 
+		<a href="#">Map</a>
+	</div>
+</div>
+
+<div class="headerDivider clearBoth">
+	<div class="search floatRight">
+		<label>Search</label>
+		<input type="text" />
+		<input type="submit" />
+	</div>
+</div>
+
+<%= render(:partial => "/shared/menu", :locals => {
+             :dom_id => 'menu',
+             :css => 'menu'
+           }) %>
