@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   end
   
   def formal
-    @title = "Formal Products"
+    @title = "Formal Wear"
     @products = Product.where(:category => 1)
     
     render 'index'

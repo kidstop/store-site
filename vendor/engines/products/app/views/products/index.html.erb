@@ -1,16 +1,3 @@
-<!--<% content_for :body_content_left do %>
-  <ul id="products">
-    <% @products.each do |product| %>
-      <li>
-        <%= link_to product.title, product_path(product) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
-
-<%= render :partial => "/shared/content_page" %>
--->
-
 <h1><%= @title %></h1>
 <ul class="products">
 	<% @products.each do |product| %>

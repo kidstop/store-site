@@ -1,0 +1,2 @@
+<% @roots = @menu_pages.select { |m| m.ancestors.map { |a| a.title == "Products" }.include?(true) } %>
+<%= render :partial => "/shared/menu", :locals => { :roots => @roots } %>
