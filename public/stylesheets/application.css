@@ -147,3 +147,16 @@
 .socialMedia 	{
 	width: auto;
 }
+
+
+/*** PRODUCTS ***/
+
+.products li {
+	display: inline-block;
+}
+
+.products li a,
+.products li label {
+	display: block;
+	text-align: center;
+}

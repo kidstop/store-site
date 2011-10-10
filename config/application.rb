@@ -38,5 +38,8 @@ module Kidstop
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    config.convert_command = "/opt/local/bin/convert"
+    config.identify_command = "/opt/local/bin/identify"
   end
 end

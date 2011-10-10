@@ -46,6 +46,9 @@ Kidstop::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  config.convert_command = "/opt/local/bin/convert"
+  config.identify_command = "/opt/local/bin/identify"
 end
 Refinery.rescue_not_found = true
 # When true will use Amazon's Simple Storage Service on your production machine

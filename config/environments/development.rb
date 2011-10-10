@@ -22,6 +22,9 @@ Kidstop::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  config.convert_command = "/opt/local/bin/convert"
+  config.identify_command = "/opt/local/bin/identify"
 end
 
 Refinery.rescue_not_found = false
