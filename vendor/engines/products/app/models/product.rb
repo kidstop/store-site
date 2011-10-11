@@ -10,5 +10,12 @@ end
 Product_Categories = {
   :Formal_Wear => 1,
   :Dressy => 2,
-  :Sportswear => 3
+  :Sportswear => 3,
+  :School_Uniforms => 4,
+  :First_Communion => 5,
+  :Christening => 6,
+  :Infants => 7,
+  :Accessories => 8,
+  :Hairpieces => 9,
+  :Clearance => 10
 }

@@ -11,23 +11,9 @@ class ProductsController < ApplicationController
     present(@page)
   end
   
-  def formal
-    @title = "Formal Wear"
-    @products = Product.where(:category => Product_Categories[:Formal_Wear])
-    
-    render 'index'
-  end
-  
-  def dressy
-    @title = "Dressy"
-    @products = Product.where(:category => Product_Categories[:Dressy])
-    
-    render 'index'
-  end
-  
-  def sportswear
-    @title = "Sports Wear"
-    @products = Product.where(:category => Product_Categories[:Sportswear])
+  def category
+    @title = params[:category].to_s.split('-').each{|word| word.capitalize!}.join(' ')
+    @products = Product.where(:category => Product_Categories[params[:category].split('-').each{|word| word.capitalize!}.join('_').to_sym])
     
     render 'index'
   end

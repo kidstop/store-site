@@ -1,7 +1,5 @@
-::Refinery::Application.routes.draw do
-  match "products/formal-wear"  => "products#formal"
-  match "products/dressy"       => "products#dressy"
-  match "products/sportswear"   => "products#sportswear"
+::Refinery::Application.routes.draw do  
+  match "products/category/:category" => "products#category"
   
   resources :products, :only => [:index, :show]
 

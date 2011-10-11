@@ -104,8 +104,8 @@ section#page {
 		text-decoration: none;
 	}
 	
-.content {
-	width: 475px;
+.column-middle {
+	width: 435px;
 }
 	
 .sections {
@@ -172,8 +172,16 @@ footer .utility-nav {
 }
 
 
+/*** SUB PAGES ***/
+
+.content {
+	width: 615px;
+}
+
+
 /*** PRODUCTS ***/
 
+.content,
 .products,
 .product {
 	margin: 5px 25px;
