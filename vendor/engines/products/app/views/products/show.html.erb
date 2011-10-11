@@ -1,57 +1,27 @@
-<% content_for :body_content_title do %>
-  <%= @product.title %>
-<% end %>
+<div class="product floatLeft">
+	<h1><%= @product.title %></h1>
+	
+	<%= image_fu @product.image, nil %>
+	
+	Model Number: <%= @product.style_number %>
+	<br />
+	<% raw @product.description %>
+	<%= number_to_currency @product.price %>
+</div>
 
-<% content_for :body_content_left do %>
-  <section>
-    <h1>Title</h1>
-    <p>
-      <%=raw @product.title %>
-    </p>
-  </section>
-  <section>
-    <h1>Description</h1>
-    <p>
-      <%=raw @product.description %>
-    </p>
-  </section>
-  <section>
-    <h1>Price</h1>
-    <p>
-      <%=raw @product.price %>
-    </p>
-  </section>
-  <section>
-    <h1>Category</h1>
-    <p>
-      <%=raw @product.category %>
-    </p>
-  </section>
-  <section>
-    <h1>Style Number</h1>
-    <p>
-      <%=raw @product.style_number %>
-    </p>
-  </section>
-  <section>
-    <h1>Image</h1>
-    <p>
-      <%= image_fu @product.image, nil %>
-    </p>
-  </section>
-<% end %>
+<div class="floatRight">
+	<% content_for :body_content_right do %>
+	  <aside>
+	    <h2><%= t('.other') %></h2>
+	    <ul id="products">
+	      <% @products.each do |product| %>
+	        <li>
+	          <%= link_to product.title, product_path(product) %>
+	        </li>
+	      <% end %>
+	    </ul>
+	  </aside>
+	<% end %>
 
-<% content_for :body_content_right do %>
-  <aside>
-    <h2><%= t('.other') %></h2>
-    <ul id="products">
-      <% @products.each do |product| %>
-        <li>
-          <%= link_to product.title, product_path(product) %>
-        </li>
-      <% end %>
-    </ul>
-  </aside>
-<% end %>
-
-<%= render :partial => "/shared/content_page" %>
+	<%= render :partial => "/shared/content_page" %>
+</div>

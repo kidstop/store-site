@@ -17,6 +17,18 @@ class ProductsController < ApplicationController
     
     render 'index'
   end
+  
+  def dressy
+    @title = "Dressy"
+    
+    render 'index'
+  end
+  
+  def sportswear
+    @title = "Sports Wear"
+    
+    render 'index'
+  end
 
   def show
     @product = Product.find(params[:id])

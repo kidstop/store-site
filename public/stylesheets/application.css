@@ -5,6 +5,15 @@
 
 
 /*** GLOBAL ***/
+h1 {
+	font-size: 24px;
+	margin-bottom: 15px;
+}
+
+li {
+	list-style: disc;
+}
+
 .floatLeft {
 	float: left;
 }
@@ -25,8 +34,8 @@
 }
 
 /* Header */
-.header {
-	
+header {
+	width: 100%;
 }
 
 .headerTop {
@@ -36,15 +45,15 @@
 }
 
 .logo {
-	margin-left: 3px;
+	margin: 0 0 4px 3px;
 }
 
-.utilityNav {
+header .utility-nav {
 	position: relative;
 	top: 20px;
 }
 
-	.utilityNav a {
+	header .utility-nav a {
 		color: #000;
 		text-decoration: none;
 	}
@@ -62,7 +71,11 @@
 }
 
 /* Body */
-.sideNav {
+section#page {
+	width: 100%;
+}
+
+.column-left {
 	background-color: #002a5c;
 	width: 200px;
 	min-height: 300px;
@@ -81,14 +94,19 @@
 	/* -khtml-border-radius: 10px; */ /* for old Konqueror browsers */
 }
 
-	.sideNav ul li {
+	.side-nav ul li {
 		margin-bottom: 2px;
+		list-style: none;
 	}
 
-	.sideNav a {
+	.side-nav a {
 		color: #fff;
 		text-decoration: none;
 	}
+	
+.content {
+	width: 475px;
+}
 	
 .sections {
 	margin: 2px 0 2px 2px;
@@ -114,7 +132,7 @@
 	}
 
 /* Footer */
-.footer {
+footer {
 	width: 100%;
 }
 
@@ -125,12 +143,17 @@
 	color: #fff;
 }
 	
-.footerUtilityNav {
+footer .utility-nav {
 	color: #fff;
 	margin: 10px 20px;
 }
 
-	.footerUtilityNav a {
+	footer .utility-nav li {
+		list-style: none;
+		display: inline-block;
+	}
+
+	footer .utility-nav a {
 		color: #fff;
 		text-decoration: none;
 	}
@@ -151,12 +174,21 @@
 
 /*** PRODUCTS ***/
 
-.products li {
-	display: inline-block;
+.products,
+.product {
+	margin: 5px 25px;
 }
 
-.products li a,
-.products li label {
-	display: block;
-	text-align: center;
-}
+	.products li {
+		display: inline-block;
+	}
+
+	.products li a,
+	.products li label {
+		display: block;
+		text-align: center;
+	}
+
+	.product img {
+		display: block;
+	}

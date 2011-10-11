@@ -1,13 +1,11 @@
 <div class="headerTop">
-	<div class="logo floatLeft">
-		<img src="/images/logo.png" />
-	</div>
+	<a href="/"><img src="/images/logo.png" class="logo floatLeft" /></a>
 	
-	<div class="utilityNav floatRight">
+	<nav class="utility-nav floatRight">
 		<a href="#">About Us</a> | 
 		<a href="#">Customer Service</a> | 
 		<a href="#">Map</a>
-	</div>
+	</nav>
 </div>
 
 <div class="headerDivider clearBoth">
@@ -17,8 +15,3 @@
 		<input type="submit" />
 	</div>
 </div>
-
-<%= render(:partial => "/shared/menu", :locals => {
-             :dom_id => 'menu',
-             :css => 'menu'
-           }) %>
