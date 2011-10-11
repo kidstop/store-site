@@ -6,3 +6,9 @@ class Product < ActiveRecord::Base
   
   belongs_to :image
 end
+
+Product_Categories = {
+  :Formal_Wear => 1,
+  :Dressy => 2,
+  :Sportswear => 3
+}

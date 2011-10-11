@@ -33,11 +33,11 @@
     <%= f.label :price -%>
     <%= f.text_field :price  -%>
   </div>
-  
-  <div class='field'>
-    <%= f.label :category -%>
-    <%= f.text_field :category  -%>
-  </div>
+	
+	<div class='field'>
+		<%= f.label :category -%>
+		<%= f.select :category, Product_Categories %>
+	</div>
   
   <div class='field'>
     <%= f.label :style_number -%>

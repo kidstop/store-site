@@ -13,19 +13,21 @@ class ProductsController < ApplicationController
   
   def formal
     @title = "Formal Wear"
-    @products = Product.where(:category => 1)
+    @products = Product.where(:category => Product_Categories[:Formal_Wear])
     
     render 'index'
   end
   
   def dressy
     @title = "Dressy"
+    @products = Product.where(:category => Product_Categories[:Dressy])
     
     render 'index'
   end
   
   def sportswear
     @title = "Sports Wear"
+    @products = Product.where(:category => Product_Categories[:Sportswear])
     
     render 'index'
   end
