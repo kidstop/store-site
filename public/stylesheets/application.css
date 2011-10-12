@@ -111,7 +111,7 @@ section#page {
 	}
 	
 .column-middle {
-	width: 435px;
+	width: 385px;
 }
 	
 .sections {
@@ -191,6 +191,7 @@ footer .utility-nav {
 /*** PRODUCTS ***/
 
 .content,
+.column-middle,
 #body_content,
 .products,
 .product {
