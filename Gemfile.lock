@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/resolve/refinerycms-search.git
+  revision: da3f2c68dcf122f834cadee2ff7be215a1e8ed5a
+  specs:
+    refinerycms-search (1.0.0)
+      refinerycms (>= 1.0.0)
+
 PATH
   remote: vendor/engines
   specs:
@@ -193,5 +200,6 @@ DEPENDENCIES
   refinerycms (~> 1.0.8)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-products (= 1.0)!
+  refinerycms-search (~> 1.0.0)!
   rmagick
   sqlite3

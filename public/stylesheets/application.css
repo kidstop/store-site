@@ -6,12 +6,18 @@
 
 /*** GLOBAL ***/
 h1 {
-	font-size: 24px;
+	font-size: 24pt;
+	margin-bottom: 15px;
+}
+
+h2 {
+	font-size: 20pt;
 	margin-bottom: 15px;
 }
 
 li {
-	list-style: disc;
+	list-style-type: disc;
+	list-style-position: inside;
 }
 
 .floatLeft {
@@ -174,14 +180,18 @@ footer .utility-nav {
 
 /*** SUB PAGES ***/
 
-.content {
+.content,
+#body_content,
+.products,
+.product {
+	float: left;
 	width: 615px;
 }
-
 
 /*** PRODUCTS ***/
 
 .content,
+#body_content,
 .products,
 .product {
 	margin: 5px 25px;

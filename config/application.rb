@@ -41,5 +41,9 @@ module Kidstop
     
     config.convert_command = "/opt/local/bin/convert"
     config.identify_command = "/opt/local/bin/identify"
+    
+    config.to_prepare do
+      Refinery.searchable_models = [Page, Product]
+    end
   end
 end
