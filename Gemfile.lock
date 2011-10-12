@@ -148,6 +148,7 @@ GEM
       refinerycms-base (= 1.0.8)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rmagick (2.13.1)
     routing-filter (0.2.4)
       actionpack
     rubyzip (0.9.4)
@@ -173,4 +174,5 @@ DEPENDENCIES
   refinerycms (~> 1.0.8)
   refinerycms-i18n (~> 1.0.0)
   refinerycms-products (= 1.0)!
+  rmagick
   sqlite3

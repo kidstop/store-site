@@ -8,6 +8,7 @@ source 'http://rubygems.org'
 gem 'sqlite3'
 
 gem 'heroku'
+gem 'rmagick'
 
 # Use unicorn as the web server
 # gem 'unicorn'
