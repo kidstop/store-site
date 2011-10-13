@@ -1,11 +1,13 @@
 <div class="product floatLeft">
 	<h1><%= @product.title %></h1>
 	
+	<%= debug @product %>
+	
 	<%= image_fu @product.image, nil %>
 	
 	Model Number: <%= @product.style_number %>
 	<br />
-	<% raw @product.description %>
+	<%= raw @product.description %>
 	<%= number_to_currency @product.price %>
 </div>
 
