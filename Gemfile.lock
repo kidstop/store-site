@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/ginga/refinerycms-image-gallery.git
+  revision: c0f349d4cf8397b145682d8c298ea45cf85b7992
+  specs:
+    refinerycms-image-gallery (0.1.2)
+
+GIT
   remote: git://github.com/resolve/refinerycms-search.git
   revision: da3f2c68dcf122f834cadee2ff7be215a1e8ed5a
   specs:
@@ -199,6 +205,7 @@ DEPENDENCIES
   heroku
   refinerycms (~> 1.0.8)
   refinerycms-i18n (~> 1.0.0)
+  refinerycms-image-gallery (~> 0.1.2)!
   refinerycms-products (= 1.0)!
   refinerycms-search (~> 1.0.0)!
   rmagick

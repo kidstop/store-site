@@ -59,6 +59,7 @@ end
 
 #gem 'refinerycms-search',					'~> 0.9.8'
 gem 'refinerycms-search',					'~> 1.0.0', :git => 'git://github.com/resolve/refinerycms-search.git'
+gem 'refinerycms-image-gallery',	'~> 0.1.2', :git => 'git://github.com/ginga/refinerycms-image-gallery.git'
 
 # Add i18n support (optional, you can remove this if you really want to).
 gem 'refinerycms-i18n',         	'~> 1.0.0'

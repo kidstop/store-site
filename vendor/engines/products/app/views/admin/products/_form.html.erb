@@ -44,16 +44,6 @@
     <%= f.text_field :style_number  -%>
   </div>
   
-  <div class='field'>
-    <%= f.label :image -%>
-    <%= render :partial => "/shared/admin/image_picker", :locals => {
-          :f => f,
-          :field => :image_id,
-          :image => @product.image,
-          :toggle_image_display => false
-        } %>
-  </div>
-  
   <%= render :partial => "/shared/admin/form_actions",
               :locals => {
                 :f => f,

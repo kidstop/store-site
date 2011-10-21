@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111012203428) do
+ActiveRecord::Schema.define(:version => 20111021055731) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -88,7 +88,6 @@ ActiveRecord::Schema.define(:version => 20111012203428) do
     t.decimal  "price"
     t.integer  "category"
     t.string   "style_number"
-    t.integer  "image_id"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
