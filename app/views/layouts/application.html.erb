@@ -22,10 +22,7 @@
 			</div>
     </div>
 
-		<% content_for :javascript_libraries do %>
-			<% javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js' %>
-		<% end %>
-
+		<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js' %>		
     <%= render :partial => "/shared/javascripts" %>
   </body>
 </html>
