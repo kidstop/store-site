@@ -3,7 +3,7 @@
 	
 	<ul class="images">
 	<% @product.images.each do |image| %>
-		<li><a href="<%= image.url %>" target="_blank"><%= image_fu image, '200x200' %></a></li>
+		<li><a href="<%= image.url %>"><%= image_fu image, '200x200' %></a></li>
 	<% end %>
 	</ul>
 	
@@ -13,21 +13,10 @@
 	<%= number_to_currency @product.price %>
 </div>
 
-<!--
-<div class="floatRight">
-	<% content_for :body_content_right do %>
-	  <aside>
-	    <h2><%= t('.other') %></h2>
-	    <ul id="products">
-	      <% @products.each do |product| %>
-	        <li>
-	          <%= link_to product.title, product_path(product) %>
-	        </li>
-	      <% end %>
-	    </ul>
-	  </aside>
-	<% end %>
+<% content_for :javascript_libraries do %>
+	<% javascript_include_tag 'jquery.lightbox-0.5.min.js' %>
+<% end %>
 
-	<%= render :partial => "/shared/content_page" %>
-</div>
--->
+<% content_for :javascripts do %>
+	<% javascript_include_tag 'products.js' %>
+<% end %>
