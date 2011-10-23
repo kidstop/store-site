@@ -1,12 +1,19 @@
 <div class="product floatLeft">
 	<h1><%= @product.title %></h1>
 	
+	<ul class="images">
+	<% @product.images.each do |image| %>
+		<li><a href="<%= image.url %>" target="_blank"><%= image_fu image, '200x200' %></a></li>
+	<% end %>
+	</ul>
+	
 	Model Number: <%= @product.style_number %>
 	<br />
 	<%= raw @product.description %>
 	<%= number_to_currency @product.price %>
 </div>
 
+<!--
 <div class="floatRight">
 	<% content_for :body_content_right do %>
 	  <aside>
@@ -23,3 +30,4 @@
 
 	<%= render :partial => "/shared/content_page" %>
 </div>
+-->

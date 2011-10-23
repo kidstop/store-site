@@ -1,0 +1,72 @@
+<%= form_for [:admin, @product] do |f| -%>
+  <%= render :partial => "/shared/admin/error_messages", :locals => {
+          :object => @product,
+          :include_object_name => true
+        } %>
+  
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest'  -%>
+  </div>
+  
+  <div class='field'>
+    <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
+      <ul id='page_parts'>
+		<li class='ui-state-default'>
+			<%= link_to 'Photo Gallery', '#photo_gallery' %>
+		</li>
+        <% [:description].each_with_index do |part, part_index| %>
+          <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
+            <%= link_to part.to_s.titleize, "##{part}" %>
+          </li>
+        <% end %>
+      </ul>
+
+      <div id='page_part_editors'>
+		<div class='page_part' id='photo_gallery'>
+			<%= render :partial => 'images', :locals => { :f => f, :chunk_name => 'photo' } -%>
+		</div>
+        <% [:description].each do |part| %>
+          <div class='page_part' id='<%= part %>'>
+            <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+  <div class='field'>
+    <%= f.label :price -%>
+    <%= f.text_field :price  -%>
+  </div>
+	
+	<div class='field'>
+		<%= f.label :category -%>
+		<%= f.select :category, Product_Categories %>
+	</div>
+  
+  <div class='field'>
+    <%= f.label :style_number -%>
+    <%= f.text_field :style_number  -%>
+  </div>
+  
+  <%= render :partial => "/shared/admin/form_actions",
+              :locals => {
+                :f => f,
+                :continue_editing => false,
+                :delete_title => t('delete', :scope => 'admin.products.product'),
+                :delete_confirmation => t('message', :scope => 'shared.admin.delete', :title => @product.title)
+              } %>
+<% end -%>
+
+<% content_for :stylesheets do %>
+	<%= stylesheet_link_tag 'gallery' %>
+<% end %>
+<% content_for :javascripts do %>
+	<%= javascript_include_tag 'gallery' %>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end %>

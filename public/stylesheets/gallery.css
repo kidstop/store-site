@@ -1,0 +1,65 @@
+a#add_image_link{
+  background: url('/images/refinery/icons/add.png') no-repeat 0px 6px;
+  margin-top: 0px;
+  line-height: 29px;
+  padding-left: 20px;
+  display: inline;
+  border-bottom: 0px none;
+}
+
+li.image_field{
+  float:left;
+  margin-left: 15px;
+  cursor: move;
+}
+
+li.empty {
+  display: none;
+}
+
+div.image_actions {
+  position: absolute;
+  background: white;
+  width: 135px;
+  padding: 3px;
+}
+
+div.image_actions img{
+  cursor: pointer;
+}
+
+div.dynamic_items{
+  overflow:auto;
+}
+
+div.ui-dialog-content{
+  margin-bottom:50px;
+}
+
+div.wym_skin_refinery{
+  opacity: 1 !important;
+}
+
+span.image-fields-edit{
+  width: 98%; 
+  float:left;
+  padding: 5px;
+  margin: 3px 0 0 0 ;
+  text-align: left;
+  color: #41403C;
+  font-weight: bold;
+  font-family: Arial;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.image-edit{
+  width: 97%;
+  margin-left: 3px;
+  border: 1px solid #7F9DB9;
+  padding: 0.4% 0.5%;
+  line-height: 20px;
+}
+
+.image-edit-checkbox{
+  width: auto;
+}

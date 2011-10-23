@@ -211,3 +211,8 @@ footer .utility-nav {
 	.product img {
 		display: block;
 	}
+	
+	.product .images li {
+		display: inline-block;
+		list-style: none;
+	}

@@ -7,8 +7,6 @@ class Product < ActiveRecord::Base
   validates :price,         :presence => true, :numericality => true
   validates :category,      :presence => true
   validates :style_number,  :presence => true, :uniqueness => true
-  
-  belongs_to :image
 end
 
 Product_Categories = {

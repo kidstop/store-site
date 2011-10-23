@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021055731) do
+ActiveRecord::Schema.define(:version => 20111021060439) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -94,6 +94,15 @@ ActiveRecord::Schema.define(:version => 20111021055731) do
   end
 
   add_index "products", ["id"], :name => "index_products_on_id"
+
+  create_table "products_images", :force => true do |t|
+    t.integer  "product_id"
+    t.integer  "image_id"
+    t.integer  "position"
+    t.string   "chunk"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_settings", :force => true do |t|
     t.string   "name"
