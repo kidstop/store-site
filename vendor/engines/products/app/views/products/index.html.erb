@@ -3,6 +3,7 @@
 	<ul>
 		<% @products.each do |product| %>
 			<li>
+				<%= link_to image_fu(product.images.first, "200x200"), product_path(product) %>
 				<%= link_to product.title, product_path(product) %>
 				<label><%= number_to_currency product.price %></label>
 			</li>
