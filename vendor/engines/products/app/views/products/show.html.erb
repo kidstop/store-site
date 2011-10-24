@@ -7,10 +7,10 @@
 	<% end %>
 	</ul>
 	
-	Model Number: <%= @product.style_number %>
-	<br />
+	Model Number: <%= @product.style_number %><br />
 	<%= raw @product.description %>
-	<%= number_to_currency @product.price %>
+	Retail Price: <label class="strikeout"><%= number_to_currency @product.retail_price %></label><br />
+	Our Price: <label><%= number_to_currency @product.kidstop_price %></label>
 </div>
 
 <% content_for :javascript_libraries do %>

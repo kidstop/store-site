@@ -23,7 +23,8 @@ class Product < ActiveRecord::Base
 
   validates :title,         :presence => true, :uniqueness => true
   validates :description,   :presence => true
-  validates :price,         :presence => true, :numericality => true
+  validates :retail_price,  :presence => true, :numericality => true
+  validates :kidstop_price, :presence => true, :numericality => true
   validates :category,      :presence => true
   validates :style_number,  :presence => true, :uniqueness => true
 end

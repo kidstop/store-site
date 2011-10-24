@@ -5,7 +5,8 @@
 			<li>
 				<%= link_to image_fu(product.images.first, "200x200"), product_path(product) %>
 				<%= link_to product.title, product_path(product) %>
-				<label><%= number_to_currency product.price %></label>
+				<label class="strikeout"><%= number_to_currency product.retail_price %></label>
+				<label><%= number_to_currency product.kidstop_price %></label>
 			</li>
 		<% end %>
 	</ul>

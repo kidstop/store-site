@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021060439) do
+ActiveRecord::Schema.define(:version => 20111024021617) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -85,12 +85,14 @@ ActiveRecord::Schema.define(:version => 20111021060439) do
   create_table "products", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.decimal  "price"
+    t.decimal  "kidstop_price"
     t.integer  "category"
     t.string   "style_number"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "retail_price"
+    t.decimal  "clearance_price"
   end
 
   add_index "products", ["id"], :name => "index_products_on_id"

@@ -24,6 +24,10 @@ li {
 	list-style-position: inside;
 }
 
+.strikeout {
+	text-decoration: line-through;
+}
+
 .floatLeft {
 	float: left;
 }
