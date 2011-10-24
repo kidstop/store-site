@@ -19,6 +19,15 @@ class ProductsController < ApplicationController
     
     render 'index'
   end
+  
+  def clearance
+    @title = "Clearance Products"
+    @products = Product.where("clearance_price IS NOT NULL AND clearance_price > 0")
+    
+    @page = Page.where(:link_url => "/products/category/clearance").first
+    
+    render 'index'
+  end
 
   def show
     @product = Product.find(params[:id])

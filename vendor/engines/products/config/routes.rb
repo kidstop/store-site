@@ -1,4 +1,6 @@
-::Refinery::Application.routes.draw do  
+::Refinery::Application.routes.draw do
+  
+  match "products/category/clearance" => "products#clearance"
   match "products/category/:category" => "products#category"
   
   resources :products, :only => [:index, :show]

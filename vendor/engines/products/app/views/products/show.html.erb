@@ -11,6 +11,10 @@
 	<%= raw @product.description %>
 	Retail Price: <label class="strikeout"><%= number_to_currency @product.retail_price %></label><br />
 	Our Price: <label><%= number_to_currency @product.kidstop_price %></label>
+	
+	<% if !@product.clearance_price.nil? && @product.clearance_price > 0 %>
+		<br />Clearance Price: <label><%= number_to_currency @product.clearance_price %></label>
+	<% end %>
 </div>
 
 <% content_for :javascript_libraries do %>

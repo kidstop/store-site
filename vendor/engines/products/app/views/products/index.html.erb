@@ -7,6 +7,10 @@
 				<%= link_to product.title, product_path(product) %>
 				<label class="strikeout"><%= number_to_currency product.retail_price %></label>
 				<label><%= number_to_currency product.kidstop_price %></label>
+
+				<% if !product.clearance_price.nil? && product.clearance_price > 0 %>
+					<label><%= number_to_currency product.clearance_price %></label>
+				<% end %>
 			</li>
 		<% end %>
 	</ul>
