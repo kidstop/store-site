@@ -15,6 +15,8 @@ class ProductsController < ApplicationController
     @title = params[:category].to_s.split('-').each{|word| word.capitalize!}.join(' ')
     @products = Product.where(:category => Product_Categories[params[:category].split('-').each{|word| word.capitalize!}.join('_').to_sym])
     
+    @page = Page.where(:link_url =>  "/products/category/#{params[:category]}").first
+    
     render 'index'
   end
 

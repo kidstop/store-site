@@ -1,0 +1,13 @@
+<% unless @page.home? %>
+	<ul class="breadcrumb">
+		<li><%= link_to "Home", root_url(:only_path => true) %> | </li>
+		
+		<% [@page.ancestors, @page].flatten.collect do |p| %>
+			<% unless p.id == @page.id %>
+			<li><%= link_to p.title, p.url %> <%= "|".html_safe %></li>			
+			<% else %>
+			<li><%= p.title %></li>
+			<% end %>
+		<% end %>
+	</ul>
+<% end %>
