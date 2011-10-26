@@ -1,2 +1,9 @@
-<% @roots = @menu_pages.select { |m| m.ancestors.map { |a| a.title == "Products" }.include?(true) } %>
-<%= render :partial => "/shared/menu", :locals => { :roots => @roots, :css => "side-nav" } %>
+<% @product_pages = @menu_pages.select { |m| m.ancestors.map { |a| a.title == "Products" }.include?(true) } %>
+<%= render	:partial => "/shared/menu",
+						:locals => { :roots => @product_pages, :css => "side-nav", :dom_id => "menu-products" } %>
+
+<% @misc_pages =	@menu_pages.select { |m|
+										m.title == "Events" || m.title == "Tips" || m.title == "Gift Certificates" 
+									} %>
+<%= render	:partial => "/shared/menu",
+						:locals => { :roots => @misc_pages, :css => "side-nav", :dom_id => "menu-misc" } %>

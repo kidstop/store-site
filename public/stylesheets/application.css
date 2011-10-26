@@ -5,6 +5,10 @@
 
 
 /*** GLOBAL ***/
+p {
+	margin-bottom: 15px;
+}
+
 h1 {
 	font-size: 24pt;
 	margin-bottom: 15px;
@@ -110,7 +114,6 @@ section#page {
 	-webkit-border-bottom-left-radius: 30px;
 	border-top-right-radius: 30px;
 	border-bottom-left-radius: 30px;
-	/* -khtml-border-radius: 10px; */ /* for old Konqueror browsers */
 }
 
 	.side-nav ul li {
@@ -121,6 +124,15 @@ section#page {
 	.side-nav a {
 		color: #fff;
 		text-decoration: none;
+	}
+	
+	#menu-products {
+		margin-bottom: 5px;
+	}
+	
+	#menu-misc {
+		border-top: solid 1px #fff;
+		padding-top: 5px;
 	}
 	
 .column-middle {
