@@ -5,23 +5,27 @@
   <body>
     <%= site_bar -%>
     <%= render :partial => "/shared/ie6check" if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
-    <div id="page_container">
+		<!--<div id="page_container">-->
 			<div class="wrapper">
 	      <header>
 	        <%= render :partial => "/shared/header" -%>
 					<%= render :partial => "/shared/breadcrumb" %>
 	      </header>
+				<div id="page-top"></div>
 	      <section id='page'>
 					<div class="column-left floatLeft">
 						<%= render :partial => "/shared/side_bar" %>
 					</div>
 	        <%= yield %>
 	      </section>
-	      <footer>
-	        <%= render :partial => "/shared/footer" -%>
-	      </footer>
+				<div id="page-bot"></div>
+				<div class="push"></div>
 			</div>
-    </div>
+			
+      <footer>
+        <%= render :partial => "/shared/footer" -%>
+      </footer>
+    <!--</div>-->
 
 		<%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js' %>		
     <%= render :partial => "/shared/javascripts" %>
