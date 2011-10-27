@@ -224,7 +224,7 @@ footer .utility-nav {
 	}
 	
 .mailingList {
-	margin: 3px 20px;
+	margin: 8px 20px;
 }
 
 	.mailingList img {
@@ -234,6 +234,7 @@ footer .utility-nav {
 	
 .socialMedia 	{
 	width: auto;
+	margin: 8px 20px 8px 0;
 }
 
 

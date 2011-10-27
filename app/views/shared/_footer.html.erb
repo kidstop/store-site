@@ -4,14 +4,17 @@
 		<li><a href="/help">Help</a> | </li>
 		<li><a href="/we-listen">We Listen</a></li>
 	</ul>
+
+	<a href="http://www.facebook.com/KidstopCape" target="_blank" class="socialMedia floatRight">
+		<img src="/images/facebook.png">
+	</a>
 	
-	<div class="mailingList floatRight">
-		<label>Join Our Mailing List</label>
-		<input type="text" />
-		<input type="submit" />
-		
-		<a href="http://www.facebook.com/KidstopCape" target="_blank"><img src="/images/facebook.png"></a>
-	</div>
+	<%= form_tag(	{ :controller => "newsletter", :action => "subscribe", :method => "post", :remote => true, :multipart => true },
+									:class => "mailingList floatRight") do %>
+		<%= label_tag :newsletter, "Join Our Mailing List" %>
+		<%= text_field_tag :newsletter %>
+		<%= submit_tag "Sign Up" %>
+	<% end %>
 </div>
 
 <p class="floatRight">

@@ -1,4 +1,6 @@
 Kidstop::Application.routes.draw do
+  post "newsletter/subscribe"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

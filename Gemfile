@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'heroku'
 gem 'rmagick'
 gem 'fog'
+gem 'madmimi'
 
 # Use unicorn as the web server
 # gem 'unicorn'
