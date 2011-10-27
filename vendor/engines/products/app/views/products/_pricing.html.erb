@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<td>Retail Price:</td>
+		<td class="alignRight strikeout"><%= number_to_currency product.retail_price %></td>
+	</tr>
+	<tr>
+		<td>Our Price:</td>
+		<td class="alignRight <%= product.clearance_price? ? 'strikeout' : '' %>">
+			<%= number_to_currency product.kidstop_price %>
+		</td>
+	</tr>
+	<% if product.clearance_price? %>
+	<tr>
+		<td>Clearance Price:&nbsp;</td>
+		<td class="alignRight"><%= number_to_currency product.clearance_price %></td>
+	</tr>
+	<% end %>
+</table>

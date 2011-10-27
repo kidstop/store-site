@@ -7,6 +7,10 @@ class Product < ActiveRecord::Base
   validates :price,         :presence => true, :numericality => true
   validates :category,      :presence => true
   validates :style_number,  :presence => true, :uniqueness => true
+  
+  def clearance_price?
+    !@product.clearance_price.nil? && @product.clearance_price > 0
+  end
 end
 
 Product_Categories = {

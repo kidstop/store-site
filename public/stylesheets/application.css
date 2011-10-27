@@ -40,6 +40,10 @@ li {
 	text-decoration: line-through;
 }
 
+.alignRight {
+	text-align: right;
+}
+
 .floatLeft {
 	float: left;
 }
