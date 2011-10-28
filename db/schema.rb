@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111024021617) do
+ActiveRecord::Schema.define(:version => 20111028030450) do
 
   create_table "images", :force => true do |t|
     t.string   "image_mime_type"
@@ -64,23 +64,17 @@ ActiveRecord::Schema.define(:version => 20111024021617) do
     t.string   "path"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "show_in_menu",        :default => true
+    t.boolean  "show_in_menu"
     t.string   "link_url"
     t.string   "menu_match"
-    t.boolean  "deletable",           :default => true
-    t.string   "custom_title_type",   :default => "none"
-    t.boolean  "draft",               :default => false
-    t.boolean  "skip_to_first_child", :default => false
+    t.boolean  "deletable"
+    t.string   "custom_title_type"
+    t.boolean  "draft"
+    t.boolean  "skip_to_first_child"
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
   end
-
-  add_index "pages", ["depth"], :name => "index_pages_on_depth"
-  add_index "pages", ["id"], :name => "index_pages_on_id"
-  add_index "pages", ["lft"], :name => "index_pages_on_lft"
-  add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
-  add_index "pages", ["rgt"], :name => "index_pages_on_rgt"
 
   create_table "products", :force => true do |t|
     t.string   "title"
@@ -93,6 +87,7 @@ ActiveRecord::Schema.define(:version => 20111024021617) do
     t.datetime "updated_at"
     t.decimal  "retail_price"
     t.decimal  "clearance_price"
+    t.string   "cost"
   end
 
   add_index "products", ["id"], :name => "index_products_on_id"
