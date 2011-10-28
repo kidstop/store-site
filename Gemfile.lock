@@ -214,3 +214,4 @@ DEPENDENCIES
   refinerycms-search (~> 1.0.0)!
   rmagick
   sqlite3
+  will_paginate

@@ -11,6 +11,7 @@ gem 'heroku'
 gem 'rmagick'
 gem 'fog'
 gem 'madmimi'
+gem 'will_paginate'
 
 # Use unicorn as the web server
 # gem 'unicorn'

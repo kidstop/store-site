@@ -7,7 +7,7 @@
 	<% end %>
 	</ul>
 	
-	Model Number: <%= @product.style_number %><br />
+	Style: <%= @product.style_number %><br />
 	<%= raw @product.description %>
 	<%= render :partial => 'pricing', :locals => { :product => @product } %>
 </div>

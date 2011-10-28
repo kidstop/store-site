@@ -276,6 +276,7 @@ footer .utility-nav {
 
 	.products li {
 		display: inline-block;
+		width: 160px;
 	}
 
 	.products li a,
@@ -292,3 +293,7 @@ footer .utility-nav {
 		display: inline-block;
 		list-style: none;
 	}
+	
+.pagination {
+	margin: 5px 0;
+}

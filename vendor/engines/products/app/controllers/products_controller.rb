@@ -13,7 +13,9 @@ class ProductsController < ApplicationController
   
   def category
     @title = params[:category].to_s.split('-').each{|word| word.capitalize!}.join(' ')
-    @products = Product.where(:category => Product_Categories[params[:category].split('-').each{|word| word.capitalize!}.join('_').to_sym])
+    @products = Product.where(:category => Product_Categories[params[:category]
+                       .split('-').each{|word| word.capitalize!}.join('_').to_sym])
+                       .paginate(:page => params[:page])
     
     @page = Page.where(:link_url =>  "/products/category/#{params[:category]}").first
     
@@ -21,7 +23,7 @@ class ProductsController < ApplicationController
   end
   
   def clearance
-    @title = "Clearance Products"
+    @title = "Clearance"
     @products = Product.where("clearance_price IS NOT NULL AND clearance_price > 0")
     
     @page = Page.where(:link_url => "/products/category/clearance").first
@@ -40,7 +42,7 @@ class ProductsController < ApplicationController
 protected
 
   def find_all_products
-    @products = Product.order('position ASC')
+    @products = Product.order('position ASC').paginate(:page => params[:page])
   end
 
   def find_page
