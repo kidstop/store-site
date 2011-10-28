@@ -25,6 +25,7 @@ class ProductsController < ApplicationController
   def clearance
     @title = "Clearance"
     @products = Product.where("clearance_price IS NOT NULL AND clearance_price > 0")
+                       .paginate(:page => params[:page])
     
     @page = Page.where(:link_url => "/products/category/clearance").first
     
