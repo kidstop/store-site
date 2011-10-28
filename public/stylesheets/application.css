@@ -105,6 +105,23 @@ header .utility-nav {
 	list-style: none;
 }
 
+#flash {
+	float: right;
+	position: relative;
+	padding: 15px;
+	margin-top: -55px;
+	color: #fff;
+}
+
+	#flash.success{
+		background-color: #002A5C;
+
+	}
+	
+	#flash.error {
+		background-color: #c20000;
+	}
+
 /* Body */
 #page-top {
 	background-image: url("/images/background-top.gif");
@@ -128,7 +145,6 @@ section#page {
 }
 
 .column-left {
-	background-color: #002a5c;
 	width: 200px;
 	min-height: 300px;
 	margin: 2px 2px 2px 0;

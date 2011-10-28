@@ -8,8 +8,11 @@
 	<a href="http://www.facebook.com/KidstopCape" target="_blank" class="socialMedia floatRight">
 		<img src="/images/facebook.png">
 	</a>
-	
-	<%= form_tag(	{ :controller => "newsletter", :action => "subscribe", :method => "post", :remote => true, :multipart => true },
+
+	<%= form_tag(	{ :controller => "newsletter", :action => "subscribe",
+									:method => "post",
+									:remote => true,
+									:multipart => true },
 									:class => "mailingList floatRight") do %>
 		<%= label_tag :newsletter, "Join Our Mailing List" %>
 		<%= text_field_tag :newsletter %>
