@@ -184,28 +184,10 @@ section#page {
 	width: 385px;
 }
 	
-.sections {
-	margin: 2px 0 2px 2px;
+.column-right {
+	width: 230px;
+	margin-top: -30px;
 }
-
-	.sections div {
-		border: 1px solid #000;
-		height: 108px;
-		width: 225px;
-		
-		margin-bottom: 5px;
-		
-		-moz-border-radius-topright: 30px;
-		-moz-border-radius-bottomleft: 30px;
-		-webkit-border-top-right-radius: 30px;
-		-webkit-border-bottom-left-radius: 30px;
-		border-top-right-radius: 30px;
-		border-bottom-left-radius: 30px;
-	}
-	
-	.sections div:last-child {
-		margin-bottom: 0;
-	}
 
 /* Footer */
 footer, .push {
@@ -271,7 +253,7 @@ footer .utility-nav {
 #body_content,
 .products,
 .product {
-	margin: 5px 25px;
+	margin: -5px 25px 5px 25px;
 }
 
 	.products li {
