@@ -21,7 +21,7 @@ class Product < ActiveRecord::Base
 
   acts_as_indexed :fields => [:title, :description, :style_number]
 
-  validates :title,         :presence => true, :uniqueness => true
+  validates :title,         :presence => true
   validates :description,   :presence => true
   validates :cost,          :presence => true
   validates :retail_price,  :presence => true, :numericality => true
