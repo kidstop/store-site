@@ -259,6 +259,11 @@ footer .utility-nav {
 	.products li {
 		display: inline-block;
 		width: 160px;
+		margin: 0 10px 15px 0;
+	}
+	
+	.products li table {
+		width: 100%;
 	}
 
 	.products li a,
