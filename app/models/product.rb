@@ -20,7 +20,7 @@ class Product < ActiveRecord::Base
   attr_accessible :title,
                   :description,
                   :kidstop_price,
-                  :retails_price,
+                  :retail_price,
                   :clearance_price,
                   :cost,
                   :category,

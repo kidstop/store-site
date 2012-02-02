@@ -1,7 +1,7 @@
 module Admin
   class ProductsController < Admin::BaseController
 
-    crudify :product, :xhr_paging => true
+    crudify :product, :paging => false
 
   end
 end
