@@ -13,6 +13,10 @@ gem 'fog'
 gem 'madmimi'
 gem 'will_paginate'
 
+group :development do
+	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -54,12 +58,12 @@ end
 
 
 # Specify additional Refinery CMS Engines here (all optional):
-# gem 'refinerycms-inquiries',    '~> 1.0'
-# gem "refinerycms-news",         '~> 1.2'
-# gem 'refinerycms-blog',         '~> 1.6'
-# gem 'refinerycms-page-images',  '~> 1.0'
+# gem 'refinerycms-inquiries',		'~> 1.0'
+# gem "refinerycms-news",					'~> 1.2'
+# gem 'refinerycms-blog',					'~> 1.6'
+# gem 'refinerycms-page-images',	'~> 1.0'
 
-#gem 'refinerycms-search',					'~> 0.9.8'
+#gem 'refinerycms-search',				'~> 0.9.8'
 gem 'refinerycms-search',					'~> 1.0.0', :git => 'git://github.com/resolve/refinerycms-search.git'
 gem 'refinerycms-image-gallery',	'~> 0.1.2', :git => 'git://github.com/ginga/refinerycms-image-gallery.git'
 

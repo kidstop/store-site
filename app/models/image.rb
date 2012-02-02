@@ -1,4 +1,20 @@
 # encoding: utf-8
+# == Schema Information
+#
+# Table name: images
+#
+#  id              :integer         not null, primary key
+#  image_mime_type :string(255)
+#  image_name      :string(255)
+#  image_size      :integer
+#  image_width     :integer
+#  image_height    :integer
+#  created_at      :datetime
+#  updated_at      :datetime
+#  image_uid       :string(255)
+#  image_ext       :string(255)
+#
+
 
 class Image < ActiveRecord::Base
 

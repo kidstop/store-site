@@ -2,7 +2,7 @@
 	<h1><%= @product.title %></h1>
 	
 	<ul class="images">
-	<% @product.images.each do |image| %>
+	<% @product.ordered_images.each do |image| %>
 		<li><a href="<%= image.url %>"><%= image_fu image, '200x200' %></a></li>
 	<% end %>
 	</ul>

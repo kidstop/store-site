@@ -1,10 +1,12 @@
 <div class="products floatLeft">
 	<h1><%= @title %></h1>
+	<%= raw @page.content_for(:body) %>
+	
 	<%= will_paginate @products %>
 	<ul>
 		<% @products.each do |product| %>
 			<li>
-				<%= link_to image_fu(product.images.first, "200x200"), product_path(product) %>
+				<%= link_to image_fu(product.primary_image, "200x200"), product_path(product) %>
 				<%= link_to product.title, product_path(product) %>
 				<label><%= product.style_number %></label>
 				<%= render :partial => 'pricing', :locals => { :product => product } %>
